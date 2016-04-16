@@ -66,10 +66,10 @@
 						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									<div class="selected" data-id="<?php echo $v->id; ?>">
+									<div class="selected platform-item-selected" data-id="<?php echo $v->id; ?>">
 										SELECTED
 									</div>
-									<div class="img-holder " data-id="<?php echo $v->id; ?>">
+									<div class="img-holder platform-item-cursor" data-id="<?php echo $v->id; ?>">
 										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 									</div>
 								</div>
@@ -94,7 +94,7 @@
 										<div class="selected" data-id="">
 											SELECTED
 										</div>
-										<div class="img-holder" data-id="">
+										<div class="courier-img" data-id="">
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>
@@ -107,7 +107,7 @@
 										<div class="selected" data-id="">
 											SELECTED
 										</div>
-										<div class="img-holder" data-id="">
+										<div class="courier-img" data-id="">
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>
@@ -117,10 +117,8 @@
 							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
 								<div class="panel panel-default">
 									<div class="panel-body">
-										<div class="selected" data-id="">
-											SELECTED
-										</div>
-										<div class="img-holder" data-id="">
+										
+										<div class="courier-img" data-id="" >
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>

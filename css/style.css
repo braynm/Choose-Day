@@ -1,4 +1,17 @@
 
+@font-face {
+	font-family: 'NotCourierSans';
+	src: url('../fonts/NotCourierSans.ttf')  format('truetype');
+}
+
+.receipt-container {
+	font-family: 'NotCourierSans';
+}
+
+.receipt-inner-container {
+	box-shadow: 1px 1px 5px #ddd;
+}
+
 .search-container .form-group {
 	margin-top: 11px;
 }
@@ -86,6 +99,13 @@ nav ul li a, nav .navbar-brand{
 	text-align: center;
 	color: #858585;
 	padding: 10px;
+}
+
+.courier-img img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	cursor: pointer;
 }
 
 

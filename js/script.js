@@ -24,8 +24,7 @@ $(function () {
 			$('.checkout-form').attr('disabled', false).removeClass('disabled');
 			console.log(r);
 			r.forEach(function(v, i) {
-				$($('.courier-item')[i]).find('.selected').attr('data-id', v.id);
-				$($('.courier-item')[i]).find('.img-holder').attr('data-id', v.id);
+				$($('.courier-item')[i]).find('.courier-img').attr('data-id', v.id);
 				$($('.courier-item')[i]).find('.panel-footer').text(v.name);
 				$($('.courier-item')[i]).find('.panel-footer').attr("title", v.description).attr("data-original-title", v.description);
 			});
@@ -97,7 +96,29 @@ $(function () {
 			$('.up-container').stop().hide(500);			
 		}
 	});
+
+	$('.courier-img').on('click', function() {
+
+		var id = $(this).attr('data-id');
+		getCandidate(id).then(function(r) {
+			console.log(r);
+		});
+		return false;
+	});
 });
+
+function getCandidate(id) {
+
+	return $.ajax({
+		url: apiUrl + "pres/courier/" + id,
+		type: "POST",
+		dataType: "JSON",
+		data: "["+id+"]",
+		headers: {
+			"Content-Type" : "application/json"
+		}
+	});
+}
 
 function getCouriers(data) {
 	return $.ajax({
