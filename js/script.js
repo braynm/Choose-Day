@@ -109,9 +109,12 @@ $(function () {
 		} else {
 
 		}
-		
+
 		return false;
 	});
+
+	// receipt modal
+	$('#receipt-modal').modal('show');
 });
 
 function getCandidate(id, data) {

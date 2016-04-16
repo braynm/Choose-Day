@@ -1,6 +1,5 @@
 <?php 
-	session_start();
-	$baseUrl = "http://192.168.1.2:8080/";
+	$baseUrl = "http://192.168.1.28:8080/";
 	$res = file_get_contents($baseUrl . "pres/products");
 	$res = json_decode($res);
 	// echo "<pre>"; print_r($res);
@@ -60,7 +59,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="col-lg-9 col-md-9 col-sm-9">
 					<div class="row">
 						<?php foreach ($res as $k => $v) :?>
 						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
@@ -128,7 +127,7 @@
 						</div>	
 					</div>
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2">
+				<div class="col-lg-3 col-md-3 col-sm-3">
 					<div class="row">
 						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">
             				<a class="twitter-timeline"  href="https://twitter.com/hashtag/PHVote" data-widget-id="721345435634241537">#PHVote Tweets</a>
