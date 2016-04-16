@@ -1,0 +1,7 @@
+{
+    "require": {
+        "sylius/cart": "0.17.*",
+        "fennb/phirehose": "~1.0",
+        "simplon/twitter": "0.2.*"
+    }
+}

@@ -1,0 +1,66 @@
+
+.search-container .form-group {
+	margin-top: 11px;
+}
+
+
+.jumbotron {
+	margin-top: 65px;
+	background-color:#f8f8f8;
+}
+
+.panel-footer {
+	color: #858585;
+}
+
+.platform-container .platform-item .platform-inner-container{
+	background: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin:5px;
+
+}
+
+.platform-container .platform-item .selected {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+    width: 81%;
+    height: 55%;
+    background-color: rgba(0,100,150,0.6);
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+    font-size: 20px;
+}
+
+.platform-container .platform-item .img-holder{
+	width: 100%;
+	cursor: pointer;
+}
+
+.platform-container .platform-item .img-holder img {
+	height: auto;
+	max-width: 100%;
+}
+
+.platform-container .platform-item .platform-inner-container:hover {
+	background-color: #EBEBEB;
+	box-shadow: 1px 3px 4px #D6D6D6;
+}
+
+.platform-container .platform-item h4{
+	color: #858585;
+}
+
+
+.feeds-container {
+	height: 500px;
+	background-color: #ddd;
+	text-align: center;
+	color: #858585;
+	padding: 10px;
+}
