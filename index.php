@@ -1,7 +1,11 @@
 <?php 
 	session_start();
-	
-?>
+	$baseUrl = "http://192.168.43.202:8081/";
+	$res = file_get_contents($baseUrl . "pres/products");
+	$res = json_decode($res);
+	// echo "<pre>"; print_r($res);
+	// die;
+?>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +28,7 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active">
+					<li class="">
 						<a href="">Home</a>
 					</li>
 					<li>
@@ -58,86 +62,72 @@
 			<div class="row">
 				<div class="col-lg-10 col-md-10 col-sm-10">
 					<div class="row">
+						<?php foreach ($res as $k => $v) :?>
 						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									<div class="selected">
+									<div class="selected" data-id="<?php echo $v->id; ?>">
 										SELECTED
 									</div>
-									<div class="img-holder">
+									<div class="img-holder " data-id="<?php echo $v->id; ?>">
 										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 									</div>
 								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="You are always near my heart because we owe you the wisdom of the ages.">Welfare of senior citizens</div>
+								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="<?php echo $v->description; ?>"><?php echo $v->name; ?></div>
 							</div>
 						</div>
+						<?php endforeach; ?>
 
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="selected">
-										SELECTED
-									</div>
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="It is.. imperative that reforms be made in our agricultural sector to improve job generation.">Job Creation</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Expansion is meaningless.. when it does not alleviate poverty, when economic gains are not shared..">Poverty reduction</div>
-							</div>
-						</div>
-
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="You are always near my heart because we owe you the wisdom of the ages.">Welfare of senior citizens</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="It is.. imperative that reforms be made in our agricultural sector to improve job generation.">Job Creation</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Expansion is meaningless.. when it does not alleviate poverty, when economic gains are not shared..">Poverty reduction</div>
-							</div>
-						</div>
 						<div class="col-lg-12">
 							<form class="checkout-form">
 								<button type="submit" class="btn btn-primary pull-right">Checkout</button>
-									
 							</form>
 						</div>
 
-						
+						<div class="couriers-container row">
+							<div class="col-lg-12">
+								<h3 class="text-center">Couriers</h3>
+							</div>
+							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="selected" data-id="">
+											SELECTED
+										</div>
+										<div class="img-holder" data-id="">
+											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
+										</div>
+									</div>
+									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+								</div>
+							</div>
+							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="selected" data-id="">
+											SELECTED
+										</div>
+										<div class="img-holder" data-id="">
+											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
+										</div>
+									</div>
+									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+								</div>
+							</div>
+							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="selected" data-id="">
+											SELECTED
+										</div>
+										<div class="img-holder" data-id="">
+											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
+										</div>
+									</div>
+									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+								</div>
+							</div>
+						</div>	
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-2 col-sm-2">
@@ -148,13 +138,20 @@
 					</div>
 				</div>
 			</div>
+
 			
 			
 		</div>
 	</div>
+	<div class="up-container">
+		<div class="up-btn"><span class="glyphicon glyphicon-menu-up"></span> UP</div>
+	</div>
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+	var apiUrl = "<?php echo $baseUrl; ?>"
+</script>
 <script src="js/script.js"></script>
 
 

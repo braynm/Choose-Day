@@ -10,147 +10,75 @@
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>	
-		
-	<nav class="nav navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-	        	</button>
-	        	<a class="navbar-brand" href="#">TV5 HACKATON</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="">Home</a>
-					</li>
-					<li>
-						<a href="">About</a>
-					</li>
-				</ul>
-		</div>
-	</nav>
 	<div class="container main-container">
-		<div class="row">
-			<div class="col-lg-12 col-sm-12 col-md-12">
-				<div class="jumbotron">
-					<h1>We are Choose-day!</h1>
-					<p>Put the app tagline here!</p>
-					<p><a class="btn btn-primary btn-lg" href="#" role="button">Share via Facebook</a></p>
-				</div>
-			</div>
-		</div>
-		<div class="row platform-container">
+		<div class="row receipt-container">
+			<h4 class="text-center candidate-name">Rodrigo Duterte</h4>
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<h3 class="text-right">Items</h3>
-					
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="text-left">Quick Profile</h4>
+					<p class="">He may have been born in Maasin, Southern Leyte in the Visayas on March 28, 1945, but Davao City Mayor Rodrigo Duterte made his mark as a politician in Mindanao. He has served several terms as mayor of Davao City, spending a total of over 20 years in the said position. He has also served as congressman and vice mayor. He graduated with a Political Science degree from the Lyceum of the Philippines University in 1968 and got his law degree from San Beda College in Manila in 1972.
+Prior to being a politician, he was a prosecutor.</p>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<p class="text-right">
-						<span class="coins">10</span> Coins remaining
-					</p>
+
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="">Main Advocacies</h4>
+					<ul class="list-unstyled">
+						<li>Fighting criminality, illegal drugs</li>
+						<li>Addressing Corruption</li>
+						<li>Shifting to a federal system of government</li>
+						<li>Reviving the death penalty</li>
+						<li>Charter change</li>
+					</ul>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-10 col-md-10 col-sm-10">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="selected">
-										SELECTED
-									</div>
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="You are always near my heart because we owe you the wisdom of the ages.">Welfare of senior citizens</div>
-							</div>
-						</div>
 
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="selected">
-										SELECTED
-									</div>
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="It is.. imperative that reforms be made in our agricultural sector to improve job generation.">Job Creation</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Expansion is meaningless.. when it does not alleviate poverty, when economic gains are not shared..">Poverty reduction</div>
-							</div>
-						</div>
-
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="You are always near my heart because we owe you the wisdom of the ages.">Welfare of senior citizens</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="It is.. imperative that reforms be made in our agricultural sector to improve job generation.">Job Creation</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-sm-4 platform-item">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<div class="img-holder">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-									</div>
-								</div>
-								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Expansion is meaningless.. when it does not alleviate poverty, when economic gains are not shared..">Poverty reduction</div>
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<form class="checkout-form">
-								<button type="submit" class="btn btn-primary pull-right">Checkout</button>
-									
-							</form>
-						</div>
-
-						
-					</div>
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="">Criticized for</h4>
+					<ul class="list-unstyled">
+						<li>his coarse and brusque language </li>
+						<li>allegedly tolerating summary executions of criminals in Davao</li>
+						<li>his infidelity and philandering </li>
+					</ul>
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div class="row">
-						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">
-							Put feeds here
-						</div>
-					</div>
+
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="">Known for</h4>
+					<ul class="list-unstyled">
+						<li>his controversial methods in crime-fighting that earned him the monikers, "The Punisher" and "Duterte Harry" </li>
+						<li>his hardline stance against suspected criminals and for allegedly condoning vigilante-style killings in Davao Watch</li>
+						<li>successfully imposing smoking and firecracker bans, and jailing drunk drivers in Davao </li>
+					</ul>
+				</div>
+
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="">Endorsed by</h4>
+					<ul class="list-unstyled">
+						<li>Senator Pia Cayetano</li>
+						<li>Antonio "Tonyboy" Floirendo Jr., banana magnate and former Davao del Norte representative</li>
+						<li>General Santos City Mayor Ronnel Rivera</li>
+						<li>Former Speaker Prospero Nograles</li>
+						<li>Former North Cotabato governor Emmanuel Piñol</li>
+						<li>Actor Robin Padilla</li>
+						<li>Mocha Girls, all-female song-and-dance group</li>
+					</ul>
+				</div>
+
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="">Accomplishment</h4>
+					<ul class="list-unstyled">
+						<li>He is credited for helping transform Davao into a clean, green, gender-sensitive, and highly urbanized city.</li>
+						<li>He is cited for restoring and maintaining law and order in Davao and helping it to be recognized in 1999, 2000, 2001, and 2002 as the city in Region XI with Best Peace and Order by the National Peace and Order Council of the National Police Commission.</li>
+						<li>He effectively implemented Davao’s no smoking ordinance in all public places, imposing hefty fines on violators.</li>
+						<li>He implemented a stricter liquor serving and selling prohibition from 1 a. m. to 8 a.m. to reduce crimes caused by alcohol intoxication.</li>
+						<li>He implemented the total firecracker and pyrotechnics ban since 2001 resulting in minimal or zero firecracker-related injuries.</li>
+						<li>He pushed the Speed Limit Ordinance that only allows motorists to drive up to 30 kph in the downtown areas and a maximum 60 kph in city borders.</li>
+						<li>He restricted videoke usage in public establishments until 10 p.m. since 2004. The loud noise prohibition is part of Davao’s Anti-Nuisance Ordinance that applies to any place within the city including residential areas.</li>
+					</ul>
+				</div>
+				<div class="col-lg-12 col-sm-12 col-md-12">
+					<h4 class="text-left">Net Worth</h4>
+					<p class="">Duterte had a total net worth of P21.97 million in 2014, a 213-percent jump from his P7.02 million net worth in 2004.</p>
 				</div>
 			</div>
-			
-			
-		</div>
 	</div>
 
 <script src="js/jquery.js"></script>
