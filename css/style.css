@@ -5,12 +5,15 @@
 }
 
 .receipt-container {
+	margin-top: 20px;
 	font-family: 'NotCourierSans';
 }
 
 .receipt-inner-container {
 	box-shadow: 1px 1px 5px #ddd;
 }
+
+
 
 .search-container .form-group {
 	margin-top: 11px;
@@ -34,6 +37,12 @@ nav ul li a, nav .navbar-brand{
 	color: #858585;
 }
 
+.fb-share-button {
+	    display: inline-block;
+    margin: 0 auto;
+    margin-left: 143px;
+}
+
 .platform-container .platform-item .platform-inner-container{
 	background: #f8f8f8;
     padding: 20px;
@@ -44,12 +53,16 @@ nav ul li a, nav .navbar-brand{
 
 }
 
+.platform-item .panel-footer {
+	height: 60px;
+}
+
 .platform-container .platform-item .selected {
 	display: none;
 	cursor: pointer;
 	position: absolute;
     width: 81%;
-    height: 55%;
+    height: 51%;
     background-color: rgba(0,100,150,0.6);
     text-align: center;
     padding: 50px;

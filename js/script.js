@@ -100,20 +100,27 @@ $(function () {
 	$('.courier-img').on('click', function() {
 
 		var id = $(this).attr('data-id');
-		getCandidate(id).then(function(r) {
-			console.log(r);
-		});
+		var c = confirm("Are you sure to choose this courier?");
+
+		if (c) {
+			getCandidate(id, ArrToString()).then(function(r) {
+				console.log(r);
+			});
+		} else {
+
+		}
+		
 		return false;
 	});
 });
 
-function getCandidate(id) {
+function getCandidate(id, data) {
 
 	return $.ajax({
 		url: apiUrl + "pres/courier/" + id,
 		type: "POST",
 		dataType: "JSON",
-		data: "["+id+"]",
+		data: data,
 		headers: {
 			"Content-Type" : "application/json"
 		}

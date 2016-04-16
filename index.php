@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$baseUrl = "http://192.168.43.202:8081/";
+	$baseUrl = "http://192.168.1.2:8080/";
 	$res = file_get_contents($baseUrl . "pres/products");
 	$res = json_decode($res);
 	// echo "<pre>"; print_r($res);
@@ -131,7 +131,7 @@
 				<div class="col-lg-2 col-md-2 col-sm-2">
 					<div class="row">
 						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">
-							Put feeds here
+            				<a class="twitter-timeline"  href="https://twitter.com/hashtag/PHVote" data-widget-id="721345435634241537">#PHVote Tweets</a>
 						</div>
 					</div>
 				</div>
@@ -151,7 +151,7 @@
 	var apiUrl = "<?php echo $baseUrl; ?>"
 </script>
 <script src="js/script.js"></script>
-
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 </body>
 </html>
