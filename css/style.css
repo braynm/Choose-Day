@@ -100,8 +100,8 @@ nav ul li a, nav .navbar-brand{
 	display: none;
 	cursor: pointer;
 	position: absolute;
-    width: 81%;
-    height: 51%;
+    width: 79%;
+    height: 47%;
     background-color: rgba(0,100,150,0.6);
     text-align: center;
     padding: 50px;
@@ -129,6 +129,10 @@ nav ul li a, nav .navbar-brand{
 	color: #858585;
 }
 
+.coins-counter-container {
+	    margin-top: 25px;
+	    color: #858585;
+}
 
 .up-container {
 	position: fixed;
@@ -147,7 +151,7 @@ nav ul li a, nav .navbar-brand{
 }
 
 .feeds-container {
-	height: 500px;
+	height:500px;
 	background-color: #ddd;
 	text-align: center;
 	color: #858585;

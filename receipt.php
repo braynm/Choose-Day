@@ -14,7 +14,9 @@
 
 	// explode string into array
 	$campaignTrails = explode("|", $res->municipalVisitedPrcnt);
-	$criticismArr = explode("|", $res->criticism);	
+	$criticismArr = explode("|", $res->criticism);
+
+		
 	
 ?>
 <!DOCTYPE html>
@@ -30,7 +32,7 @@
 			<div class="receipt-inner-container col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4">
 				<h4 class="text-center candidate-name">CHOOSE DAY</h4>
 				<p class="text-center">*Tagline*</p>
-				<p class="text-center">No. (000-000-00<?php echo $_GET['id']; ?>) </p>
+				<p class="text-center">No. (000-000-<?php echo str_pad($_GET['id'], 3, "0", STR_PAD_LEFT); ?>) </p>
 				<div class="row">
 					<div class="col-lg-12 col-sm-12 col-md-12">
 						<h4>Selections</h4>
@@ -81,7 +83,7 @@
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<h5 class="text-center">Campaign Trail</h5>
 								<p class="text-center"><?php echo $campaignTrails[1]; ?> out of 1634 municipalities or <?php echo $campaignTrails[0]; ?> has already been visited by <?php echo $res->presName; ?></p>
-								<p class="text-center">To know more click <a href="#">here.</a></p>
+								<!-- <p class="text-center">To know more click <a href="#">here.</a></p> -->
 							</div>
 						</div>
 
@@ -105,7 +107,7 @@
 			<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Results</h4>
+				<h4 class="modal-title" id="myModalLabel">Result</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">

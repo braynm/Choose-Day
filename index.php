@@ -62,7 +62,7 @@
 					<h3 class="text-right weapon-title">Weapons for Change</h3>
 					
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="col-lg-6 col-md-6 col-sm-6 coins-counter-container">
 					<p class="text-right">
 						<span class="coins">5</span> Coins remaining
 					</p>
