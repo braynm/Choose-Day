@@ -1,5 +1,5 @@
 var slideTime = 200;
-var coins = 10;
+var coins = 5;
 var ids = [];
 var maxItem = 5;
 var itemCounter = 0;

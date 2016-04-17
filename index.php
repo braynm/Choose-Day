@@ -64,7 +64,7 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<p class="text-right">
-						<span class="coins">10</span> Coins remaining
+						<span class="coins">5</span> Coins remaining
 					</p>
 				</div>
 			</div>
@@ -79,7 +79,7 @@
 										SELECTED
 									</div>
 									<div class="img-holder platform-item-cursor" data-id="<?php echo $v->id; ?>">
-										<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
+										<img src="images/hacksyon.png"/>
 									</div>
 								</div>
 								<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="<?php echo $v->description; ?>"><?php echo $v->name; ?></div>
@@ -87,92 +87,11 @@
 						</div>
 						<?php endforeach; ?>
 
-						<div class="col-lg-12">
-								<span class="text-left small-note">Descriptions are based on the 2012 SWS Survey on the most important problem of the country today.</span>
-							<form class="checkout-form">
-								<button type="submit" class="btn btn-primary pull-right">Checkout</button>
+						<div class="col-lg-12" style="margin:10px;">
+								<p class="text-center small-note">Descriptions are based on the 2012 SWS Survey on the most important problem of the country today.</p>
+							<form class="checkout-form text-center">
+								<button type="submit" class="btn btn-primary">Checkout</button>
 							</form>
-						</div>
-
-						<div class="couriers-container row">
-							<div class="col-lg-12">
-								<h3 class="text-center" style="color:">Couriers</h3>
-							</div>
-							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h3 class="courier-name">Name</h3>
-									</div>
-									<div class="panel-body">
-										<div class="selected" data-id="">
-											SELECTED
-										</div>
-										<div class="courier-img" data-id="">
-											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-										</div>
-									</div>
-									<div class="panel-footer" >
-										<div class="row">
-											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="criticized-for">Criticized for</h4>
-											</div>
-											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="stand">Stand</h4>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h3 class="courier-name">Name</h3>
-									</div>
-									<div class="panel-body">
-										<div class="selected" data-id="">
-											SELECTED
-										</div>
-										<div class="courier-img" data-id="">
-											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-										</div>
-									</div>
-									<div class="panel-footer" >
-										<div class="row">
-											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="criticized-for">Criticized for</h4>
-											</div>
-											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="stand">Stand</h4>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h3 class="courier-name">Name</h3>
-									</div>
-									<div class="panel-body">
-										<div class="selected" data-id="">
-											SELECTED
-										</div>
-										<div class="courier-img" data-id="">
-											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
-										</div>
-									</div>
-									<div class="panel-footer" >
-										<div class="row">
-											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="criticized-for">Criticized for</h4>
-											</div>
-											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
-												<h4 class="stand">Stand</h4>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>	
 					</div>
 				</div>
@@ -189,6 +108,84 @@
 
 			
 			
+		</div>
+	</div>
+	<div style="background-color: #2CCA90;">
+		<div class="container">
+			<div class="couriers-container row">
+				<div class="col-lg-12">
+					<h3 class="text-center" style="font-size: 40px; color:#fff;">Couriers</h3>
+				</div>
+				<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="courier-name">Name</h3>
+						</div>
+						<div class="panel-body">
+							
+							<div class="courier-img" data-id="">
+								<img src="images/hacksyon.png"/>
+							</div>
+						</div>
+						<div class="panel-footer" >
+							<div class="row">
+								<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="criticized-for">Criticized for</h4>
+								</div>
+								<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="stand">Stand</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="courier-name">Name</h3>
+						</div>
+						<div class="panel-body">
+							
+							<div class="courier-img" data-id="">
+								<img src="images/hacksyon.png"/>
+							</div>
+						</div>
+						<div class="panel-footer" >
+							<div class="row">
+								<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="criticized-for">Criticized for</h4>
+								</div>
+								<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="stand">Stand</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="courier-name">Name</h3>
+						</div>
+						<div class="panel-body">
+							
+							<div class="courier-img" data-id="">
+								<img src="images/hacksyon.png"/>
+							</div>
+						</div>
+						<div class="panel-footer" >
+							<div class="row">
+								<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="criticized-for">Criticized for</h4>
+								</div>
+								<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+									<h4 class="stand">Stand</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="up-container">

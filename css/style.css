@@ -82,7 +82,7 @@ nav ul li a, nav .navbar-brand{
     margin:5px;
 
 }
-
+/*
 .platform-item-cursor {
 
     background: url(https://pixabay.com/static/uploads/photo/2015/02/27/23/29/philippines-652971_960_720.png);
@@ -90,7 +90,7 @@ nav ul li a, nav .navbar-brand{
     z-index: 10;
     background-size: cover;
 
-}
+}*/
 
 .platform-item .panel-footer {
 	height: 60px;
@@ -139,10 +139,10 @@ nav ul li a, nav .navbar-brand{
 .up-btn{
 	cursor: pointer;
 	padding: 20px;
-	background-color: #ddd;	
+	background-color: #21976B;	
 	width: 80px;
 	height: 50px;
-	color:#858585;
+	color:#fff;
 	text-align: center;
 }
 
@@ -157,6 +157,11 @@ nav ul li a, nav .navbar-brand{
 .courier-name {
 	color: #858585;
 	font-size: 12px;
+}
+
+.courier-img img:hover {
+	box-shadow: 1px 1px 5px #000;
+	background-color: red !important;
 }
 
 .courier-img img {
@@ -174,7 +179,6 @@ nav ul li a, nav .navbar-brand{
 	font-size: 15px;
 }
 
-
 /**
 * receipt
 *
@@ -182,4 +186,8 @@ nav ul li a, nav .navbar-brand{
 
 .candidate-name {
 	text-transform: uppercase;
+}
+
+.small-note {
+	color: #858585;
 }

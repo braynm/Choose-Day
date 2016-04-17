@@ -2,7 +2,15 @@
 	$baseUrl = require_once __DIR__ . "/config.php";
 	$res = file_get_contents($baseUrl . "pres/receipt/" . $_GET['id']);
 	$res = json_decode($res);
+	$presImgs = [
+		'Jejomar Binay' => 'b.png',
+		'Rudy Duterte' => 'd.png',
+		'Grace Poe' => 'p.png',
+		'Mar Roxas' => 'r.png',
+		'Miriam Santiago' => 's.png',
+	];
 
+	$campaignTrails = explode("|", $res->municipalVisitedPrcnt);
 	$criticismArr = explode("|", $res->criticism);	
 	// echo "<pre>";
 	// print_r($res); die;
@@ -70,6 +78,7 @@
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<h5 class="text-center">Campaign Trail</h5>
+								<p class="text-center"><?php echo $campaignTrails[1]; ?> out of 1634 municipalities or <?php echo $campaignTrails[0]; ?> has already been visited by <?php echo $res->presName; ?></p>
 								<p class="text-center">To know more click <a href="#">here.</a></p>
 							</div>
 						</div>
@@ -77,7 +86,7 @@
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<p><div id="fb-root"></div>
-								<div class="fb-share-button" data-href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-layout="button" data-mobile-iframe="true"></div>
+								<div class="fb-share-button" data-href="<?php echo 'http://' . $_SERVER['REQUEST_URI']; ?>" data-layout="button" data-mobile-iframe="true"></div>
 								</p>
 								<p class="text-center">This serves as your official receipt.</p>
 								<p class="text-center">Thank you. Enjoy your day.</p>
@@ -98,9 +107,12 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
+						<div class="img-container thumbnail" style="width: 31%; margin: 0 auto;">
+							 <img src="<?php echo 'images/' . $presImgs[$res->presName]; ?>"/>
+						</div>
 					<div class="col-lg-12 col-sm-12 col-md-12">
 						<div class="form-group text-center">
-							<h3 style="font-size:20px;" ><?php echo $res->percent?>%</h3>
+							<h3 style="font-size:44px;" ><?php echo round($res->percent, 2)?>%</h3>
 							<p>of the users has spawned.</p>
 						</div>
 					</div>
