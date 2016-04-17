@@ -2,6 +2,8 @@
 	$baseUrl = require_once __DIR__ . "/config.php";
 	$res = file_get_contents($baseUrl . "pres/receipt/" . $_GET['id']);
 	$res = json_decode($res);
+
+	// map president name to designated image
 	$presImgs = [
 		'Jejomar Binay' => 'b.png',
 		'Rudy Duterte' => 'd.png',
@@ -10,10 +12,10 @@
 		'Miriam Santiago' => 's.png',
 	];
 
+	// explode string into array
 	$campaignTrails = explode("|", $res->municipalVisitedPrcnt);
 	$criticismArr = explode("|", $res->criticism);	
-	// echo "<pre>";
-	// print_r($res); die;
+	
 ?>
 <!DOCTYPE html>
 <html>

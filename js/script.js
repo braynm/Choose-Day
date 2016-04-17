@@ -1,10 +1,10 @@
-var slideTime = 200;
-var coins = 5;
-var ids = [];
-var maxItem = 5;
-var itemCounter = 0;
 
-var courierCounter = 0;
+var slideTime = 200;  // slide time
+var coins = 5; // default value of total coins
+var ids = []; // storage of items
+var maxItem = 5; // total max items
+var itemCounter = 0; // item counter
+
 	
 $(function () {
 
@@ -143,7 +143,7 @@ $(function () {
 		return false;
 	}); 
 
-	// receipt modal
+	// receipt modal show on load
 	$('#receipt-modal').modal('show');
 });
 

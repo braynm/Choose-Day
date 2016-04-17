@@ -59,7 +59,7 @@
 		<div class="row platform-container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<h3 class="text-right" style="color:#858585;">Weapons for Change</h3>
+					<h3 class="text-right weapon-title">Weapons for Change</h3>
 					
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
@@ -87,7 +87,7 @@
 						</div>
 						<?php endforeach; ?>
 
-						<div class="col-lg-12" style="margin:10px;">
+						<div class="col-lg-12 checkout-container">
 								<p class="text-center small-note">Descriptions are based on the 2012 SWS Survey on the most important problem of the country today.</p>
 							<form class="checkout-form text-center">
 								<button type="submit" class="btn btn-primary">Checkout</button>
@@ -110,11 +110,11 @@
 			
 		</div>
 	</div>
-	<div style="background-color: #2CCA90;">
+	<div class="couriers-main-container">
 		<div class="container">
 			<div class="couriers-container row">
 				<div class="col-lg-12">
-					<h3 class="text-center" style="font-size: 40px; color:#fff;">Couriers</h3>
+					<h3 class="text-center courier-title" >Couriers</h3>
 				</div>
 				<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
 					<div class="panel panel-default">
