@@ -24,15 +24,37 @@ $(function () {
 			$('.checkout-form').attr('disabled', false).removeClass('disabled');
 			console.log(r);
 			r.forEach(function(v, i) {
+
+				var descArr = v.description.split("|");
+				var standArr = v.stand.split("|");
+
+				criticizedForTxt = "";
+				standTxt = "";
+				descArr.forEach(function(item, j) {
+
+					criticizedForTxt += item;
+					criticizedForTxt += "\n";
+					
+				});
+
+				standArr.forEach(function(item, j) {
+
+					standTxt += item;
+					standTxt += "\n";
+					
+				});
+
+				$($('.courier-item')[i]).find('.courier-name').text(v.name);
 				$($('.courier-item')[i]).find('.courier-img').attr('data-id', v.id);
-				$($('.courier-item')[i]).find('.panel-footer').text(v.name);
-				$($('.courier-item')[i]).find('.panel-footer').attr("title", v.description).attr("data-original-title", v.description);
+				$($('.courier-item')[i]).find('.panel-footer .criticized-for').parent().attr("title", criticizedForTxt).attr("data-original-title", criticizedForTxt);
+
+				$($('.courier-item')[i]).find('.panel-footer .stand').parent().attr("title", standTxt).attr("data-original-title", standTxt);
 			});
 
 			$('.couriers-container').show();
 			$('html, body').animate({
 		        scrollTop: $(".checkout-form").offset().top + 100
-		    }, 2000);
+		    }, 500);
 		});
 
 		return false;
@@ -92,9 +114,16 @@ $(function () {
 		var top  = window.pageYOffset || document.documentElement.scrollTop;
 		if (top >= 300) {
 			$('.up-container').stop().show(500);
-		} else {
+		} else if (top > 200) {
+			$('nav').slideDown(300);
+
+		} else if (top < 200) {
+			$('nav').slideUp(300);
 			$('.up-container').stop().hide(500);			
+
 		}
+
+
 	});
 
 	$('.courier-img').on('click', function() {
@@ -105,13 +134,14 @@ $(function () {
 		if (c) {
 			getCandidate(id, ArrToString()).then(function(r) {
 				console.log(r);
+				window.location =  "http://localhost/hacksyon/receipt.php?id=" + r;
 			});
 		} else {
 
 		}
 
 		return false;
-	});
+	}); 
 
 	// receipt modal
 	$('#receipt-modal').modal('show');

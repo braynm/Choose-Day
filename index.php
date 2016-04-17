@@ -1,19 +1,18 @@
 <?php 
-	$baseUrl = "http://192.168.1.28:8080/";
+	$baseUrl = require_once __DIR__ . "/config.php";
 	$res = file_get_contents($baseUrl . "pres/products");
 	$res = json_decode($res);
-	// echo "<pre>"; print_r($res);
-	// die;
 ?>	
 <!DOCTYPE html>
 <html>
 <head>
 	<title>TV5 - HACKATON</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>	
-		
+	
 	<nav class="nav navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -36,8 +35,19 @@
 				</ul>
 		</div>
 	</nav>
+	<div class="cover-vid">
+		<div class="text-container">
+			<h1>SanDATA</h1>
+			<blockquote>
+				<p>Arming Filipinos with the right information to make the best decision.</p>
+			</blockquote>
+		</div>
+		<video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+	        <source src="images/343025947.mp4" type="video/mp4">
+	    </video>
+	</div>
 	<div class="container main-container">
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-lg-12 col-sm-12 col-md-12">
 				<div class="jumbotron">
 					<h1>We are Choose-day!</h1>
@@ -45,11 +55,11 @@
 					<p><a class="btn btn-primary btn-lg" href="#" role="button">Share via Facebook</a></p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row platform-container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6">
-					<h3 class="text-right">Items</h3>
+					<h3 class="text-right" style="color:#858585;">Weapons for Change</h3>
 					
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
@@ -78,6 +88,7 @@
 						<?php endforeach; ?>
 
 						<div class="col-lg-12">
+								<span class="text-left small-note">Descriptions are based on the 2012 SWS Survey on the most important problem of the country today.</span>
 							<form class="checkout-form">
 								<button type="submit" class="btn btn-primary pull-right">Checkout</button>
 							</form>
@@ -85,10 +96,13 @@
 
 						<div class="couriers-container row">
 							<div class="col-lg-12">
-								<h3 class="text-center">Couriers</h3>
+								<h3 class="text-center" style="color:">Couriers</h3>
 							</div>
 							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
 								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="courier-name">Name</h3>
+									</div>
 									<div class="panel-body">
 										<div class="selected" data-id="">
 											SELECTED
@@ -97,11 +111,23 @@
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>
-									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+									<div class="panel-footer" >
+										<div class="row">
+											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="criticized-for">Criticized for</h4>
+											</div>
+											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="stand">Stand</h4>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
 								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="courier-name">Name</h3>
+									</div>
 									<div class="panel-body">
 										<div class="selected" data-id="">
 											SELECTED
@@ -110,18 +136,41 @@
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>
-									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+									<div class="panel-footer" >
+										<div class="row">
+											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="criticized-for">Criticized for</h4>
+											</div>
+											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="stand">Stand</h4>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="courier-item col-lg-4 col-md-4 col-sm-4 platform-item">
 								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h3 class="courier-name">Name</h3>
+									</div>
 									<div class="panel-body">
-										
-										<div class="courier-img" data-id="" >
+										<div class="selected" data-id="">
+											SELECTED
+										</div>
+										<div class="courier-img" data-id="">
 											<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=HACKSYON&w=350&h=150"/>
 										</div>
 									</div>
-									<div class="panel-footer" data-toggle="tooltip" data-placement="top" title="Description">Name</div>
+									<div class="panel-footer" >
+										<div class="row">
+											<div class="col-lg-6 text-left" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="criticized-for">Criticized for</h4>
+											</div>
+											<div class="col-lg-6 text-right" data-toggle="tooltip" data-placement="top" title="Description">
+												<h4 class="stand">Stand</h4>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>	
@@ -129,8 +178,10 @@
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-3">
 					<div class="row">
-						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">
-            				<a class="twitter-timeline"  href="https://twitter.com/hashtag/PHVote" data-widget-id="721345435634241537">#PHVote Tweets</a>
+						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/BilangPilipino" data-widget-id="721345435634241537">#BilangPilipino Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+
 						</div>
 					</div>
 				</div>
@@ -150,7 +201,7 @@
 	var apiUrl = "<?php echo $baseUrl; ?>"
 </script>
 <script src="js/script.js"></script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
 
 </body>
 </html>

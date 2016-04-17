@@ -1,5 +1,11 @@
 <?php 
-	
+	$baseUrl = require_once __DIR__ . "/config.php";
+	$res = file_get_contents($baseUrl . "pres/receipt/" . $_GET['id']);
+	$res = json_decode($res);
+
+	$criticismArr = explode("|", $res->criticism);	
+	// echo "<pre>";
+	// print_r($res); die;
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,20 +20,19 @@
 			<div class="receipt-inner-container col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4">
 				<h4 class="text-center candidate-name">CHOOSE DAY</h4>
 				<p class="text-center">*Tagline*</p>
-				<p class="text-center">No. (000-000-001) </p>
+				<p class="text-center">No. (000-000-00<?php echo $_GET['id']; ?>) </p>
 				<div class="row">
 					<div class="col-lg-12 col-sm-12 col-md-12">
 						<h4>Selections</h4>
 						<ul>
-							<li>Poverty Reduction</li>
-							<li>Military</li>
-							<li>Reviving death penalty</li>
-							<li>Charter change</li>
+							<?php foreach($res->choosenAdvocacy as $k => $v) : ?>
+							<li><?php echo $v->name ?></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 					<div class="col-lg-12 col-sm-12 col-md-12">
 						<h4>Courier</h4>
-						<p>Rodrigo Duterte</p>
+						<p><?php echo $res->courier ?></p>
 					</div>
 
 					<div class="col-lg-12 col-sm-12 col-md-12">
@@ -35,7 +40,7 @@
 						<div class="row">
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<h5>Candidate Name</h5>
-								<p>Rodrigo Duterte</p>
+								<p><?php echo $res->presName ?></p>
 							</div>
 						</div>
 
@@ -43,11 +48,9 @@
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<h5>Main Advocacies</h5>
 								<ul>
-									<li>Fighting criminality, illegal drugs</li>
-									<li>Addressing corruption</li>
-									<li>Shifting to a federal system of government</li>
-									<li>Reviving Death Penalty</li>
-									<li>Charter Change</li>
+									<?php foreach($res->mainAdvocacy as $k => $v) : ?>
+									<li><?php echo $v->name ?></li>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
@@ -56,9 +59,11 @@
 							<div class="col-lg-12 col-sm-12 col-md-12">
 								<h5>Criticized for</h5>
 								<ul>
-									<li>his coarse and brusque language </li>
-									<li>allegedly tolerating summary executions of criminals in Davao</li>
-									<li>his infidelity and philandering </li>
+									<?php foreach($criticismArr as $k => $v) : ?>
+										<?php if ($k < (count($criticismArr)-1)) :?>
+											<li><?php echo $v ?></li>
+										<?php endif; ?>
+									<?php endforeach; ?>
 								</ul>
 							</div>
 						</div>
@@ -92,8 +97,13 @@
 				<h4 class="modal-title" id="myModalLabel">Results</h4>
 			</div>
 			<div class="modal-body">
-				<div>
-					
+				<div class="row">
+					<div class="col-lg-12 col-sm-12 col-md-12">
+						<div class="form-group text-center">
+							<h3 style="font-size:20px;" ><?php echo $res->percent?>%</h3>
+							<p>of the users has spawned.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="modal-footer">
