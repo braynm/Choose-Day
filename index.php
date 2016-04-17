@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TV5 - HACKATON</title>
+	<title>SanDATA</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/style.css"/>
@@ -22,7 +22,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 	        	</button>
-	        	<a class="navbar-brand" href="#">TV5 HACKATON</a>
+	        	<a class="navbar-brand" href="#">SanDATA</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -180,7 +180,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-sm-12 col-md-12 feeds-container">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/BilangPilipino" data-widget-id="721345435634241537">#BilangPilipino Tweets</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+
 
 						</div>
 					</div>
